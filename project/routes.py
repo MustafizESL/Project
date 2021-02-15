@@ -46,7 +46,7 @@ def register():
 
 
 
-@app.route("/login")
+@app.route("/login", methods=['GET', 'POST'])
 def login():
 	if current_user.is_authenticated:
 		return redirect(url_for('home'))
